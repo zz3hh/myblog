@@ -1,0 +1,34 @@
+<% include header %>
+	<div class="box section about">
+		<div class="addlinks">
+			<ul>
+				<li>
+					<p>链接名称:</p>
+					<input id="js_link-id" type="hidden" value="<%=link.id %>"/>
+					<input id="js_link-name" class="addlink-input" type="text" value="<%=link.name %>"/>
+				</li>
+				<li>
+					<p>链接地址:</p>
+					<input id="js_link-url" class="addlink-input" type="text" value="<%=link.url %>"/>
+				</li>
+				<li>
+					<p>是否为内链:
+						<input id="js_link-isInner" class="" type="checkbox" <%= link.isInner=='1' ? 'checked':'';%>/>
+					</p>
+				</li>
+				<li>
+					<p>是否交换链接:
+						<input id="js_link-isExchange" class="" type="checkbox" <%= link.isExchange=='1' ? 'checked':'';%>/>
+					</p>
+				</li>
+				<li>
+					<p>链接描述:</p>
+					<textarea id="js_link-description" class="addlink-input"><%=link.description %></textarea>
+				</li>
+			</ul>
+			<div class="atlhand-btns">
+				<a id="js_post-links" href="javascript:;">保存修改</a>
+			</div>
+		</div>
+	</div>
+<% include footer %>

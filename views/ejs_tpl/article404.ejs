@@ -1,0 +1,27 @@
+<% include header %>
+	<div class="box section about min-height">
+		<div id="section-left" class="fl article-box">
+			<div id="website-nofind">
+				<h1>404 Not Found</h1>
+				<p>文章被管理员弄丢了，给您造成不便约他</p>
+				<a href="/<%= links%>">返回</a>
+			</div>
+		</div>
+		<div id="section-right" class="fr clearfix">
+			<div class="small-box">
+				<h3>博文分类</h3>
+				<div id="article-typelist" data-type = "0" class="clearfix">
+					<% if(categorylist && categorylist.length > 0){ categorylist.forEach(function(category, index){ %>
+                		<a href="/category/all/<%-category.category%>" title="查看分类：<%-category.category%>"><%-category.category%><span>(<%-category.counts%>)</span></a>
+                	<% })} %>
+				</div>
+			</div>
+			<% include author %>
+			<div id="duoshuo-visit" class="small-box">
+				<h3>网站最近访客：</h3>
+				<ul class="ds-recent-visitors" data-num-items="10"></ul>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+<% include footer %>

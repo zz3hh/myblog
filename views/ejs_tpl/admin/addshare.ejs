@@ -1,0 +1,71 @@
+<% include header %>
+	<div class="box section about">
+		<div class="create-box">
+			<h2>新增分享文章</h2>
+			<div class="area">
+				<h3>博客链接
+					<span> （目前支持
+						<a href="http://blog.csdn.net" target="_blank">CSDN</a>、
+						<a href="http://sentsin.com" target="_blank">闲心网</a>、
+						<a href="http://www.tuyiyi.com" target="_blank">图翼网</a>、
+						<a href="http://www.ui.cn" target="_blank">UI</a>、
+						<a href="http://www.w3cfuns.com" target="_blank">w3cfuns</a>、
+						<a href="http://www.html-js.com" target="_blank">前端乱炖</a>、
+						<a href="http://www.w3ctech.com" target="_blank">w3ctech</a>、
+						<a href="http://www.yyyweb.com" target="_blank">梦想天空</a>、
+						<a href="http://www.nodeclass.com" target="_blank">nodeclass</a>、
+						<a href="http://www.codeceo.com" target="_blank">codeceo</a>、
+						<a href="http://ued.taobao.org" target="_blank">淘宝UED</a>、
+						的文章链接）
+					</span>
+				</h3>
+				<div class="link">
+					<input id="js_share-inputurl" class="cmd-link" name="link" type="text">
+					<button id="fetchCommodity" class="active">获取信息</button>
+				</div>
+			</div>
+			<div class="loading" style="display: none;">
+				<img src="http://img0.lukou.com/static/img/fetchloading.gif?v=805d952d3bed999cdb4b8ff7c99e8c42" alt="">
+			</div>
+		</div>
+		<div id="share">
+			<div id="article-header">
+				<h3>文章标题</h3>
+				<input id="js_share-title" class="article-name" type="text" />
+			</div>
+			<div id="article-header">
+				<h3>作者</h3>
+				<input id="js_share-author" class="article-name" type="text" />
+			</div>
+			<div id="article-header">
+				<h3>原文路径</h3>
+				<input id="js_share-url" class="article-name" type="text" />
+			</div>
+			<div id="article-header">
+				<h3>文章简介</h3>
+				<textarea id="js_share-headintro" class="article-input" placeholder="首页展示提示信息"></textarea>
+			</div>
+			<div id="article-header">
+				<h3>文章展示图片</h3>
+				<input id="js_share-headimg" class="article-name" type="text" />
+			</div>
+			<div id="article-footer">
+				<h3>文章标签</h3>
+				<input id="js_share-category" class="article-category" type="text" />
+			</div>
+			<div id="article-content">
+				<h3>文章内容</h3>
+				<script id="editor" type="text/plain" style="width:100%;height:500px;margin: 0 auto;"></script>
+			</div>
+			<div class="atlhand-btns">
+				<a id="js_post-share" class="save-btns" href="javascript:;">发表分享</a>
+			</div>
+		</div>
+		<script type="text/javascript" charset="utf-8" src="/javascripts/ueditor/ueditor.config.js"></script>
+    	<script type="text/javascript" charset="utf-8" src="/javascripts/ueditor/ueditor.all.min.js"> </script>
+    	<script type="text/javascript" charset="utf-8" src="/javascripts/ueditor/lang/zh-cn/zh-cn.js"></script>
+		<script type="text/javascript">
+		    var ue = UE.getEditor('editor');
+		</script>
+	</div>
+<% include footer %>

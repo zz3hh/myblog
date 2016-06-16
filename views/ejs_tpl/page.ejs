@@ -1,0 +1,38 @@
+<div class="paging">
+    共 <%= paging.total %> 条记录 , 每页 <%= paging.perpage %> 条 , 共 <%= paging.count %> 页
+    <ul class="pager">
+        <%
+            var html = [];
+            if(paging.number > 0 && paging.curPage <= paging.pages){
+                var startPage = 1,
+                    prevPage = paging.curPage - 1,
+                    nextPage = paging.curPage + 1,
+                    cp = Math.ceil(paging.curPage/paging.narrow),
+                    tp = Math.ceil(paging.pages/paging.narrow);
+                if(paging.curPage > paging.narrow){
+                    html.push('<li><a href="?p=1">First</a></li>');
+                    html.push('<li><a href="?p=' + (paging.curPage - 1) + '">Prev</a></li>');
+                    html.push('<li><a href="?p=' + (cp - 1)*paging.narrow + '">...</a></li>');
+                }
+                if(cp > 1){
+                    startPage = (cp-1)*paging.narrow + 1;
+                }
+                for(var i = startPage; i < cp*paging.narrow + 1; i++){
+                    if (i > paging.pages) break;
+                    if (i == paging.curPage) {
+                        html.push('<li><a href="javascript:" class="current">' + i + '</a></li>');
+                    } else {
+                        html.push('<li><a href="?p=' + i + '">' + i + '</a></li>');
+                    }
+                }
+                if(cp < tp){
+                    html.push('<li><a href="?p=' + (cp*paging.narrow + 1) + '">...</a></li>');
+                    html.push('<li><a href="?p=' + nextPage + '">Next</a></li>');
+                    html.push('<li><a href="?p=' + paging.pages + '">Last</a></li>');
+                }
+                html = html.join('');
+            }
+        %>
+        <%- html %>
+    </ul>
+</div>

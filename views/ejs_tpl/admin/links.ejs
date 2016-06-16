@@ -1,0 +1,23 @@
+<% include header %>
+	<div class="box section about">
+		<% if(linkdata && linkdata.length > 0) { linkdata.forEach(function(link, index){ %>
+				<li class="link" linkid ="<%= link.id%>">
+					<div class="post-list">
+						<h2 class="title">
+							<a target="_blank" href="<%= link.url%>"><%= link.name %></a>
+							<a class="update-links" href="/admin/editlinks/<%= link.id%>">修改</a>
+							<a class="delete-links" href="javascript:;">删除</a>
+						</h2>
+						<div class="content">
+							<%= link.description %>
+						</div>
+					</div>
+				</li>
+			</ul>
+		<% })}else{ %>
+		<div class="no-result">
+		    <p>抱歉，网站还没有链接，赶快与他人去交换链接吧。</p>
+		</div>
+		<% } %>
+	</div>
+<% include footer %>

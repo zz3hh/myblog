@@ -1,0 +1,46 @@
+<% include header %>
+	<div class="box section about article min-height">
+		<div id="section-left" class="fl">
+			<% if(articles && articles.length > 0){ articles.forEach(function(article, index){ %>
+				<div class="post-list">
+					<h2 class="title">
+						<a class="category" href="/category/share/<%- article.category%>" title="查看更多<%- article.category%>分类文章"><%- article.category%><i></i></a>
+						<a href="/share/<%= article.id %>"><%- article.title %></a>
+					</h2>
+					<div class="info">
+						<span class="icomoon post-date">发布时间：<%- new Date(article.time).toLocaleString() %></span>
+						<span class="icomoon read-time"><%- article.readtime %>人浏览</span>
+						<span class="icomoon post-author">作者：<%- article.author %></span>
+					</div>
+					<div class="content">
+						<p>
+							<%- article.headintro %>
+						    <a href="/share/<%= article.id %>" title="查看更多">[查看更多]</a>
+						</p>
+					</div>
+				</div>
+			<% })}else{ %>
+				<div class="no-result">
+				    <p>抱歉，还没有文章。</p>
+				</div>
+			<% } %>
+			<% include paging-block %>
+		</div>
+		<div id="section-right" class="fr clearfix">
+			<div class="small-box">
+				<h3>分享博文分类</h3>
+				<div id="article-typelist" data-type = "2" class="clearfix">
+					<% if(categorylist && categorylist.length > 0){ categorylist.forEach(function(category, index){ %>
+                		<a target="_blank" href="/category/share/<%-category.category%>" title="查看分类：<%-category.category%>"><%-category.category%><span>(<%-category.counts%>)</span></a>
+                	<% })} %>
+				</div>
+			</div>
+			<% include author %>
+			<div id="duoshuo-visit" class="small-box">
+				<h3>网站最近访客：</h3>
+				<ul class="ds-recent-visitors" data-num-items="10"></ul>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+<% include footer %>

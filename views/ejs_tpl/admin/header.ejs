@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link type="text/css" rel="stylesheet" href="/stylesheets/style.css">
+<link type="text/css" rel="stylesheet" href="/stylesheets/prettify.css">
+<link type="text/css" rel="stylesheet" href="/javascripts/fancybox2/jquery.fancybox.css">
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/js/html5shiv.js"></script>
+<![endif]-->	
+<title><%= title%></title>
+</head>
+<body>
+	<div id="header">
+		<div id="head-top">
+			<div id="head-topbox" class="box">
+				<h1 class="fl logo"><a href="/"><%= siteData.shortname %></a></h1>
+				<div id="topform">
+					<form class="header_search" action="/query" method="get">
+						<input class="header_key" type="text" name="key" value="" maxlength="40">
+						<input class="header_btn" type="submit" value="搜 索">
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="head-navbox">
+			<div class="box head-navmain">
+				<div id="isay" class="fr">
+                    <i class="fa fa-bullhorn"></i>
+                    <ul style="margin-top: 0px;">
+                        <li><a href="/">常用jquery</a></li>
+                        <li><a href="/">I am back</a></li>
+                        <li><a href="/">小米2s MIUI V6特别版 英文归属地解决方法</a></li>
+                        <li><a href="/">蛋疼的zeroclipboard js在本地运行不生效</a></li>
+                        <li><a href="/">wordpress 友情链接</a></li>
+                        <li><a href="/">微信 HTTP_USER_AGENT</a></li>
+                    </ul>
+                    <div class="close">X</div>
+                </div>
+				<ul class="head-navmenu">
+					<li>
+						<a href="/">首页</a>
+					</li>
+					<li>
+						<a href="/admin/article" class="<%= links=='article'?'active':'' %>" >博客</a>
+					</li>
+					<li>
+						<a href="/admin/share" class="<%= links=='share'?'active':'' %>" >分享</a>
+					</li>
+					<li>
+						<a href="/admin/links" class="<%= links=='links'?'active':'' %>">友链</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>

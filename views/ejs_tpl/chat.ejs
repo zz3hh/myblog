@@ -1,0 +1,78 @@
+<% include header %>
+	<div class="box section about min-height">
+		<div id="section-left" class="fl">
+			<% if(user.id){ %>
+				<div id="js_chat-notice" class="chat-notice chat-info">欢迎您进入前端白小白聊天室：<h3><%=user.name%></h3></div>
+			<%}else{%>
+				<div id="js_chat-notice" class="chat-notice chat-info">亲记得要登录，才能参与聊天哦！</div>
+			<%}%>
+			<div id="content">
+				<div id="room-list">
+					<ul class="room-listbox">
+					</ul>
+				</div>
+				<div id="messagesbox">
+					<div id="messages">
+						<ul class="chat_view">
+						</ul>
+					</div>
+					<div id="send-form">
+						<textarea id="send-message"></textarea>
+						<div id="send-box">
+							<ul id ="chat_advertise">
+								<li>
+									<a href="http://www.baoxianqi.com?from=http://www.baiyatao.com" target="_blank" title="购物省钱神器,省钱就是赚钱，保鲜期惊喜不断">购物省钱神器,省钱就是赚钱，保鲜期惊喜不断</a>
+								</li>
+								<li>
+									<a href="http://www.baoxianqi.com?from=http://www.baiyatao.com" target="_blank" title="存钱罐APP内测中，50元现金等您来拿">存钱罐APP内测中，50元现金等您来拿</a>
+								</li>
+								<li>
+									<a href="http://www.baoxianqi.com?from=http://www.baiyatao.com" target="_blank" title="购物不丢单，任务高收益，参与存钱罐APP内测">购物不丢单，任务高收益，参与存钱罐APP内测</a>
+								</li>
+								<li>
+									<a href="http://www.aconf.org?from=http://www.baiyatao.com" target="_blank" title="艾会网学术会议在线系统支持多种国际语言，让您会议更加多元化">艾会网学术会议在线系统支持多种国际语言，让您会议更加多元化</a>
+								</li>
+								<li>
+									<a href="http://www.aconf.org?from=http://www.baiyatao.com" target="_blank" title="艾会网免费创建我的会议网站">艾会网免费创建我的会议网站</a>
+								</li>
+							</ul>
+							<input id="send-button" type="submit" value="发送" />
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div id="section-right" class="fr clearfix">
+			<div id="js-post-random" class="small-box">
+				<h3>为您随机推荐的文章</h3>
+				<span id="js-need-reload" class="icomoon"></span>
+				<div id="circle" style="display: block;"></div>
+				<div id="circle1" style="display: block;"></div>
+				<ul id="js_random-article" style="display: none;"></ul>
+			</div>
+			<% include author %>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="footer">
+			<div class="footer-c">
+				<p><span>Copyright © 2015-2018  <a href="http://www.baiyatao.com">baiyatao.com</a>  <a href="http://www.miitbeian.gov.cn">鄂ICP备15001156号-4</a></span></p>
+				<p>
+					<span>其它任何合作事项，请发送邮件：<a href="mailto:flytosky1991@126.com?subject=baiyatao.com">flytosky1991@126.com</a></span>
+				</p>
+			</div>
+	</div>
+	  <script src="http://baiyatao.com:5000/socket.io/socket.io.js" type="text/javascript"></script>
+	  <script type="text/javascript" src="/javascripts/jquery.js"></script>
+	  <script type="text/javascript" src="/javascripts/prettify.js"></script>
+	  <script type="text/javascript" src="/javascripts/fancybox2/jquery.fancybox.pack.js"></script>
+	  <script type="text/javascript" src="/javascripts/main.js"></script>
+	  <script type="text/javascript">
+	  	var user = '<%- JSON.stringify(user)%>';
+	  </script>
+	  <script type="text/javascript" src="/javascripts/laytpl.js"></script>
+	  <script type="text/javascript" src="/javascripts/chat/chat.js"></script>
+	  <script type="text/javascript" src="/javascripts/chat/chat_ui.js"></script>
+	</body>
+</html>

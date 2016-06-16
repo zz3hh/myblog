@@ -1,0 +1,74 @@
+<% include header %>
+	<div class="box section about">
+		<div id="section-left" class="fl">
+		<div class="card">
+		    <h3>关于我:</h3>
+            <pre class="prettyprint lang-js">var card = {
+    Name: '前端-白小白',
+    EnName: 'rabbit',
+    Description: '前端攻城狮一枚，屌丝一个，热爱前端，喜欢瞎折腾，但大多悲了个剧,一直奔走在前进的道路上',
+    Age: '90后',
+    Hometown: '一马平川、人杰地灵、老子(李耳)故里河南鹿邑',
+    Location: '武汉-武昌区',
+    QQ: '879974693',
+    Email: 'flytosky1991@126.com',
+    Timeline: [
+        {
+            time: '2012.02 ~ 2013.7',
+            company: '武汉伯仲科技有限公司',
+            job: 'Android工程师+web前端工程师'
+        },
+        {
+            time: '2013.7 ~ 2014.9',
+            company: '传神网络科技有限公司',
+            job: 'web前端工程师'
+        }
+        {
+            time: '2014.9 ~ 至今',
+            company: '武汉四三一八网络科技有限公司',
+            job: 'web前端工程师'
+        }
+    ]
+};</pre>
+			<div id="follow">
+				<h3>关注我：</h3>
+				<a title="新浪微博" href="http://weibo.com/u/3115797441">新浪微博</a>
+				<a title="CSDN" href="http://blog.csdn.net/zz3hh">CSDN</a>
+			</div>
+			<div id="contact">
+				<h3>联系我：</h3>
+				<p>邮箱：
+					<a href="mailto:flytosky1991@126.com?subject=baiyatao.com">flytosky1991@126.com</a>
+					<a href="mailto:zz3hh1991@gmail.com?subject=baiyatao.com">zz3hh1991@gmail.com</a>
+				</p>
+				<p>QQ：879974693
+	            	<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=879974693&amp;site=qq&amp;menu=yes">
+	            		<img border="0" src="http://wpa.qq.com/pa?p=2:879974693:51" alt="点击这里给我发消息" title="点击这里给我发消息">
+	            	</a>
+	             </p>
+             </div>
+            <h3>关于博客:</h3>
+            <p>我是一个nodejs新手，作为一个前端工程师来说javascript是必须掌握的技能，从接触到nodejs后就开始瞎捣鼓些东西。nodejs能做的远不止开发一个网站那么简单，blog只是在学习nodejs做WEB应用过程中的小实例。参考的<a href="http://github.com/Shaman05/node-blog" target="_blank">Node-blog</a></p>
+            <p>Node-blog是一个可以通过配置、安装的小型博客系统，她的功能非常简单，只有文章发布、评论。在它的基础上修改而来，纯手工代码。</p>
+            <p>一直坚信，站在巨人的肩上我们看的更远，有时没有必要重复造车。</p>
+		</div>
+		</div>
+		<div id="section-right" class="fr clearfix">
+			<div id="js-post-random" class="small-box">
+				<h3>为您随机推荐的文章</h3>
+				<span id="js-need-reload" class="icomoon"></span>
+				<div id="circle" style="display: block;"></div>
+				<div id="circle1" style="display: block;"></div>
+				<ul id="js_random-article" style="display: none;">
+					
+				</ul>
+			</div>
+			<% include author %>
+			<div class="small-box">
+				<h3>向前端白小白捐款</h3>
+				<img src="/images/zhifubao.png" width="100%"/>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+<% include footer %>

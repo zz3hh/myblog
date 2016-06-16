@@ -1,0 +1,37 @@
+<div class="paging">
+    <ul class="pager">
+        <%
+            var html = [];
+		    if(paging.number > 0 && paging.number <= paging.count){
+		        var startPage = 1,
+		            prevPage = paging.number - 1,
+		            nextPage = paging.number + 1,
+		            cp = Math.ceil(paging.number/paging.narrow),
+		            tp = Math.ceil(paging.count/paging.narrow);
+		        if(paging.number > paging.narrow){
+		            html.push('<li><a href="?key='+searchkey+'&page=1">首页</a></li>');
+		            html.push('<li><a href="?key='+searchkey+'&page=' + (paging.number - 1) + '">上一页</a></li>');
+		            html.push('<li><a href="?key='+searchkey+'&page=' + (cp - 1)*paging.narrow + '">...</a></li>');
+		        }
+		        if(cp > 1){
+		            startPage = (cp-1)*paging.narrow + 1;
+		        }
+		        for(var i = startPage; i < cp*paging.narrow + 1; i++){
+		            if (i > paging.count) break;
+		            if (i == paging.number) {
+		                html.push('<li><a href="javascript:" class="current">' + i + '</a></li>');
+		            } else {
+		                html.push('<li><a href="?key='+searchkey+'&page=' + i + '">' + i + '</a></li>');
+		            }
+		        }
+		        if(cp < tp){
+		            html.push('<li><a href="?key='+searchkey+'&page=' + (cp*paging.narrow + 1) + '">...</a></li>');
+		            html.push('<li><a href="?key='+searchkey+'&page=' + nextPage + '">下一页</a></li>');
+		            html.push('<li><a href="?key='+searchkey+'&page=' + paging.count + '">尾页</a></li>');
+		        }
+		        html = html.join('');
+		    }
+        %>
+        <%- html %>
+    </ul>
+</div>

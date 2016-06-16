@@ -1,0 +1,52 @@
+var base = '前端白小白,前端,白小白,博客,个人博客,baiyatao,白亚涛,前端,前端开发,web前端,web前端开发,前端开发工程师,前端开发攻城师,设计,开发,前端资源,CSS,JavaScript,Ajax,jQuery,html,html5,css3,浏览器兼容,前端开发工具,jQuery,nodejs,node,boostrap,sublime';
+module.exports = {
+	base:base,
+	home:{
+		keywords:base+',前端白小白个人网站,前端白小白网站首页',
+		description:'前端白小白就像大海中的一粒沙，热爱技术研发工作，喜欢钻研代码，师父领进门修行在个人，今天的我一直走在学习的道路上，学习的道路上自强不息，希望找到志同道合和朋友，一起痛苦着并快乐着争论不休关于代码的优化、性能的提高，算法等等。'
+	},
+	self:{
+		keywords:base+',前端白小白个人文章,前端白小白博客列表',
+		description:'前端白小白也想做一个布道者，但是能力有限，只想把自己自学道路上遇到的困难和见解分享给大家，希望多多提出您的宝贵意见，让我们风雨同舟。'
+	},
+	share:{
+		keywords:base+',前端白小白个人分享,前端白小白文章分享',
+		description:'站在巨人的肩上我们看的更远，有时没有必要重复造车，前端白小白的分享，分享一些高人的见解，使我们少走弯路。'
+	},
+	lab:{
+		keywords:base+',前端白小白参与的项目,前端白小白曾经项目展示',
+		description:'曾经的曾经，做过一些值得骄傲的项目，个人价值的体现。当你创造出一个新的东西，自心的喜悦只有自己知道。'
+	},
+	chat:{
+		keywords:base+',前端白小白聊天室,websocket,socket,socket.io',
+		description:'前端白小白聊天室采用了socket.io做的实时通讯聊天，利用多说的评论组件，让访问者可以使用十种社交工具进行聊天。'
+	},
+	say:{
+		keywords:base+',前端白小白留言板,留言板,想说的,建议,意见,想法',
+		description:'人无完人，前端白小白留言板，使用的多说评论组件做的，希望留下访问者宝贵的建议。'
+	},
+	links:{
+		keywords:base+',前端白小白友链,友链,链接,内链,交换链接',
+		description:'优秀前端网站列表，推荐一些高质量的有关前端的网站，推荐技术牛人的网站，使更多的人了解其它优秀的网站'
+	},
+	about:{
+		keywords:base+',关于前端白小白,前端白小白简历',
+		description:'前端白小白的个人简历，走过路过悟出多少才是真的活过，如果每天重复着昨天的生活，那么其实和死着没有区别，人生要有梦想，相信会有实现的一天，王侯将相宁有种乎！'
+	},
+	Nofind:{
+		keywords:base,
+		description:'sorry we can not find that!'
+	},
+	Error:{
+		keywords:base,
+		description:'Internal Server Error'
+	},
+	NoArticle:{
+		keywords:base,
+		description:'文章没有找到'
+	},
+	NoCategory:{
+		keywords:base,
+		description:'文章分类没有找到'
+	}
+};

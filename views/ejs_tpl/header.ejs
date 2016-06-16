@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title><%= title%></title>
+		<meta name="keywords" content="<%= seo.keywords%>">
+		<meta name="description" content="<%= seo.description%>"/>
+		<meta name="keywords" content="">
+		<link type="text/css" rel="stylesheet" href="/stylesheets/style.css">
+		<link type="text/css" rel="stylesheet" href="/stylesheets/prettify.css">
+		<link type="text/css" rel="stylesheet" href="/javascripts/fancybox2/jquery.fancybox.css">
+		<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" media="screen">
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="/js/html5shiv.js"></script>
+		<script>alert("请不要使用ie浏览本站！本站不支持ie10以下浏览器。")</script>
+		<![endif]-->
+		<script type="text/javascript">
+			var duoshuoQuery = {
+				short_name:"baiyatao",
+				sso: { 
+		           login: "/login?url="+location.href,
+		           logout: "/logout?url="+location.href
+	       		}	
+			};
+		</script>
+		<script type="text/javascript" src="http://static.duoshuo.com/embed.js" ></script>
+	</head>
+<body>
+	<div id="header">
+		<div id="head-top">
+			<div id="head-topbox" class="box">
+				<h1 class="fl logo"><a href="/"><%= siteData.shortname %></a></h1>
+				<div id="topform">
+					<form class="header_search" action="/query" method="get">
+						<input class="header_key" type="text" name="key" value="<%-searchkey%>" maxlength="40">
+						<input class="header_btn" type="submit" value="搜 索">
+					</form>
+				</div>
+				<div class="header_user" id="usertop">
+					<% if(userInfo){ %>
+						<a class="avatar" target="_blank" href="<%=userInfo.url%>">
+							<img src="<%=userInfo.avatar_url%>" />
+							<span><%=userInfo.name%></span>
+						</a>
+						<a id="js_logout" class="logout" href="/logout">撤兵</a>
+					<%}else{%>
+						<div id="js_other" class="ds-login" style="display: none;"></div>
+					<%}%>
+				</div>
+			</div>
+		</div>
+		<div id="head-navbox">
+			<div class="box head-navmain">
+				<div id="isay" class="fr">
+                    <i class="icomoon fa-bullhorn"></i>
+                    <ul id="js_hot-blog" style="margin-top: 0px;">
+                    	<% if(toplist && toplist.length > 0){ toplist.forEach(function(article, index){ %>
+                    		<li><a target="_blank" href="<%-article.url%>"><%-article.title%></a></li>	
+                    	<% })} %>
+                    </ul>
+                    <div class="close">X</div>
+                </div>
+				<ul class="head-navmenu">
+					<li>
+						<a href="/" class="<%= links=='index'?'active':'' %>" >首页</a>
+					</li>
+					<li>
+						<a href="/self" class="<%= links=='self'?'active':'' %>" >个人</a>
+					</li>
+					<li>
+						<a href="/share" class="<%= links=='share'?'active':'' %>" >分享</a>
+					</li>
+					<li>
+						<a href="/lab" class="<%= links=='lab'?'active':'' %>" >往昔</a>
+					</li>
+					<li>
+						<a href="/chat" class="<%= links=='chat'?'active':'' %>" >调侃</a>
+					</li>
+					<li>
+						<a href="/links"class="<%= links=='links'?'active':'' %>" >友链</a>
+					</li>
+					<li>
+						<a href="/say" class="<%= links=='say'?'active':'' %>" >留言</a>
+					</li>
+					<li>
+						<a href="/about" class="<%= links=='about'?'active':'' %>" >关于</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
