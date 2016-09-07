@@ -34,13 +34,13 @@
 
 
 ```
-1. 安装 `Node.js[必须]` `Mysql[必须]`
-2. 启动 Mysql
-3. `$ npm install` 安装项目的依赖包
-4. `cp config.js` 请根据需要修改配置文件，并执行`node setup`,请认查看config
-5. `$ npm start` 确保静态脚步和样式压缩
-6. visit `http://localhost:3000`
-7. done!
+  1. 安装 `Node.js[必须]` `Mysql[必须]`
+  2. 启动 Mysql
+  3. `$ npm install` 安装项目的依赖包
+  4. `cp config.js` 请根据需要修改配置文件，并执行`node setup`,请认查看config
+  5. `$ npm start` 确保静态脚步和样式压缩
+  6. visit `http://localhost:3000`
+  7. done!
 ```
 
 ## 参考项目
